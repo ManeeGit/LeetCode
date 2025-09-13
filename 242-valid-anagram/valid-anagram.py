@@ -3,9 +3,6 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        countS, countT = {}, {}
+        return sorted(s) == sorted(t)
 
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0) # .get(___, 0) Prevents Key error
-            countT[t[i]] = 1 + countT.get(t[i], 0)
-        return countS == countT
+        
